@@ -2,6 +2,7 @@ FROM alpine:3.12.4
 ENV VERIFY_CHECKSUM=false
 ENV HELM_VERSION=3.5.3
 # RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.12.4/main' >> /etc/apk/repositories
+
 RUN apk add --no-cache ca-certificates bash openssl \
     && rm -rf /var/cache/apk/* \
     && echo "Helm Version : ${HELM_VERSION}" \
