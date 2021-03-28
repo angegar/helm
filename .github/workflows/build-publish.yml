@@ -26,3 +26,4 @@ jobs:
         env:
           UNAME: ${{ secrets.UNAME }}
           UPASS: ${{ secrets.UPASS }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}

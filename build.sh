@@ -3,7 +3,7 @@
 
 function getHelmCliTags () {
 	### GitHub : Get all releases
-	curl -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/helm/helm/releases | jq '.[].tag_name' | sed -e s/v//g -e /-rc/d -e s/\"//g| sort -g
+	curl -H "Authorization: token $GH_TOKEN" -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/helm/helm/releases | jq '.[].tag_name' | sed -e s/v//g -e /-rc/d -e s/\"//g | sort -g
 }
 
 ### DockerHub : Get image tags
