@@ -1,5 +1,5 @@
 build:
-	docker build -t angegar/helm .
+	docker build -t angegar/helm . --build-arg HELM_VERSION="3.3.0"
 
 alias: local_folder
 	@echo "\e[32mRemove existing helm alias\e[39m"
