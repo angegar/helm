@@ -57,7 +57,7 @@ function buildImages () {
 				docker build -t "angegar/helm:$tag"  --build-arg HELM_VERSION="$tag" .
 
 				# Build the latest tag tag
-				if [ "$tags" == "$TAG_LATEST" ]; then
+				if [ "$tag" == "$TAG_LATEST" ]; then
 					docker build -t "angegar/helm:latest" --build-arg HELM_VERSION="$tag" .
 				fi 
 			else
