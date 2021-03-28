@@ -21,7 +21,7 @@ jobs:
         with:
           # Full git history is needed to get a proper list of changed files within `super-linter`
           fetch-depth: 0
-      - run: apt-get install -y curl jq
+      # - run: apt-get install -y curl jq
       - run: chmod +x build.sh && ./build.sh
         env:
           UNAME: ${{ secrets.UNAME }}
